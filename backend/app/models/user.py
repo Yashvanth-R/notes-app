@@ -1,0 +1,2 @@
+class Users:
+    collection = "users"
