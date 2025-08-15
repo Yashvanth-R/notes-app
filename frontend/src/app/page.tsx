@@ -130,13 +130,10 @@ export default function HomePage() {
       
       <div className="min-h-screen bg-[#f5f5dc]">
         <div className="max-w-6xl mx-auto p-6 space-y-8">
-          {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-semibold text-[#5a4a3a] mb-2">Your Notes</h1>
             <div className="w-16 h-0.5 bg-[#5fb3b3] mx-auto"></div>
           </div>
-
-          {/* Search Bar */}
           <div className="max-w-md mx-auto">
             <Input
               placeholder="Search your notes..."
@@ -146,7 +143,6 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Create Note Button */}
           <div className="text-center">
             <Button
               onClick={() => setShowCreateForm(!showCreateForm)}
@@ -155,8 +151,6 @@ export default function HomePage() {
               {showCreateForm ? "Cancel" : "Create New Note"}
             </Button>
           </div>
-
-          {/* Create Note Form */}
           {showCreateForm && (
             <div className="max-w-2xl mx-auto bg-[#f0e6d2] border-2 border-[#d0c0a0] rounded-lg shadow-lg p-6">
               <h2 className="text-xl font-semibold text-[#5a4a3a] mb-4">Create New Note</h2>
@@ -200,7 +194,6 @@ export default function HomePage() {
             </div>
           )}
 
-          {/* Notes Section */}
           <div className="bg-[#f0e6d2] border-2 border-[#d0c0a0] rounded-lg shadow-lg p-6">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold text-[#5a4a3a]">My Notes</h2>
@@ -231,7 +224,6 @@ export default function HomePage() {
                     key={note.note_id}
                     className="bg-white border border-[#d0c0a0] rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow duration-200"
                   >
-                    {/* Note Header */}
                     <div className="flex items-start justify-between mb-3">
                       <h3 className="text-base font-semibold text-[#5a4a3a] flex-1 mr-2 line-clamp-2">
                         {note.note_title}
@@ -254,13 +246,9 @@ export default function HomePage() {
                         </Button>
                       </div>
                     </div>
-
-                    {/* Note Content */}
                     <p className="text-[#8b7355] text-sm mb-4 line-clamp-4 whitespace-pre-wrap">
                       {note.note_content}
                     </p>
-
-                    {/* Note Footer */}
                     <div className="flex items-center justify-between text-xs text-[#8b7355] pt-2 border-t border-[#e8dcc6]">
                       <span className="bg-[#f8f6f0] px-2 py-1 rounded">
                         {new Date(note.last_update).toLocaleDateString('en-US', {

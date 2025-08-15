@@ -21,19 +21,7 @@ export default function Navbar() {
               href="/" 
               className="text-white/90 hover:text-white transition-colors duration-200 text-sm"
             >
-              About
-            </Link>
-            <Link 
-              href="/" 
-              className="text-white/90 hover:text-white transition-colors duration-200 text-sm"
-            >
               Notes
-            </Link>
-            <Link 
-              href="/" 
-              className="text-white/90 hover:text-white transition-colors duration-200 text-sm"
-            >
-              Account
             </Link>
           </div>
           <div className="flex items-center space-x-2">

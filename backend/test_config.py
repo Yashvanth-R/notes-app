@@ -13,8 +13,6 @@ try:
     print(f"JWT Secret: {settings.jwt_secret[:20]}...")
     print(f"JWT Expires: {settings.jwt_expires_in}")
     print(f"CORS Origins: {settings.cors_origins}")
-    
-    # Testing the MongoDB connection
     print("\nTesting MongoDB connection...")
     import asyncio
     from app.db.client import get_db

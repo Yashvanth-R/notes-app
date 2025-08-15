@@ -55,7 +55,7 @@ async def list_notes(
         
         notes = await db[Notes.collection].find(
             filter_query,
-            {"_id": 0}  # Exclude MongoDB's _id field
+            {"_id": 0} 
         ).sort("last_update", -1).skip(skip).limit(limit).to_list(limit)
 
         return [Notes.get_public_note_data(note) for note in notes]

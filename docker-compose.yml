@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  api:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: notes-api
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRES_IN=${JWT_EXPIRES_IN}
+      - CORS_ORIGINS=${CORS_ORIGINS}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    networks:
+      - notes-network
+    restart: unless-stopped
+
+  web:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: notes-frontend
+    depends_on:
+      - api
+    environment:
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - notes-network
+    restart: unless-stopped
+
+networks:
+  notes-network:
+    driver: bridge
