@@ -16,23 +16,36 @@ export default function HomePage() {
 
   const load = async () => {
     if (!token) return setNotes([]);
-    const res = await authFetch((t) => api.get<Note[]>("/notes", { params: { q }, ...withAuthHeaders(t) }).then(r => r.data));
-    setNotes(res);
+    try {
+      const res = await authFetch((t) => api.get<Note[]>("/notes", { params: { q }, ...withAuthHeaders(t) }).then(r => r.data));
+      setNotes(res);
+    } catch (error) {
+      console.error("Failed to load notes:", error);
+      setNotes([]);
+    }
   };
 
   useEffect(() => { load(); /* eslint-disable-next-line */ }, [token]);
 
   const onCreate = async () => {
     if (!token) return;
-    await authFetch((t) => api.post("/notes", { note_title: title, note_content: content }, withAuthHeaders(t)));
-    setTitle(""); setContent("");
-    await load();
+    try {
+      await authFetch((t) => api.post("/notes", { note_title: title, note_content: content }, withAuthHeaders(t)));
+      setTitle(""); setContent("");
+      await load();
+    } catch (error) {
+      console.error("Failed to create note:", error);
+    }
   };
 
   const onDelete = async (id: string) => {
     if (!token) return;
-    await authFetch((t) => api.delete(`/notes/${id}`, withAuthHeaders(t)));
-    await load();
+    try {
+      await authFetch((t) => api.delete(`/notes/${id}`, withAuthHeaders(t)));
+      await load();
+    } catch (error) {
+      console.error("Failed to delete note:", error);
+    }
   };
 
   return (
