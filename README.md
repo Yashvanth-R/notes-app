@@ -176,30 +176,3 @@ docker compose logs -f
 # Stop services
 docker compose down
 ```
-
-## UI Images(Frontend)
-
-## Welcome Page
-<img width="1904" height="895" alt="Screenshot from 2025-08-18 11-50-27" src="https://github.com/user-attachments/assets/33dae54a-0f98-41bd-89b0-69fc055bac65" />
-
-## Login Page
-<img width="1904" height="895" alt="Screenshot from 2025-08-18 11-50-40" src="https://github.com/user-attachments/assets/3ea12e63-73d8-4280-b240-3aa65533405f" />
-
-## Sign Up Page
-<img width="1904" height="895" alt="Screenshot from 2025-08-18 11-50-50" src="https://github.com/user-attachments/assets/2a3df814-fa24-4cac-8503-13dfb383bc9d" />
-
-## Notes Page
-<img width="1904" height="895" alt="Screenshot from 2025-08-18 12-13-03" src="https://github.com/user-attachments/assets/708a5b5a-de01-48e8-bb61-ee768f9de103" />
-
-## Create Note Page
-<img width="1904" height="895" alt="Screenshot from 2025-08-18 12-13-18" src="https://github.com/user-attachments/assets/50d5857c-841d-42fc-b4a3-a6f083a7f5fd" />
-
-## Edit the created note page
-<img width="1904" height="895" alt="Screenshot from 2025-08-18 12-13-31" src="https://github.com/user-attachments/assets/fae7ae47-5512-44cc-8f53-d7bfe8254546" />
-
-## Delete the created note page
-<img width="1904" height="892" alt="Screenshot from 2025-08-18 12-14-12" src="https://github.com/user-attachments/assets/d748330f-d33f-4201-879d-26d27068892f" />
-
-
-
-
