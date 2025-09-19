@@ -119,34 +119,6 @@ docker compose up --build -d
 - **Responsive Design** - Access your notes from any device
 - **Secure Authentication** - Your notes are private and secure
 
-## Project Structure
-
-```
-notes-app/
-├── frontend/                   # Next.js frontend application
-│   ├── src/
-│   │   ├── app/               # Next.js app router pages
-│   │   ├── components/        # Reusable React components
-│   │   ├── hooks/             # Custom React hooks
-│   │   ├── lib/               # Utility functions and API client
-│   │   ├── styles/            # Global styles and Tailwind CSS
-│   │   └── types/             # TypeScript type definitions
-│   ├── package.json           # Frontend dependencies
-│   └── tailwind.config.ts     # Tailwind CSS configuration
-├── backend/                    # FastAPI backend application
-│   ├── app/
-│   │   ├── core/              # Configuration and security
-│   │   ├── db/                # Database connection
-│   │   ├── models/            # Data models
-│   │   ├── routes/            # API endpoints
-│   │   ├── schemas/           # Pydantic schemas
-│   │   └── main.py            # FastAPI application entry point
-│   ├── requirements.txt       # Python dependencies
-│   └── .env                   # Environment variables
-├── docker-compose.yml         # Docker orchestration
-└── README.md                  # This file
-```
-
 ## API Endpoints
 
 ### Authentication
