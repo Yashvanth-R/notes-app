@@ -28,8 +28,6 @@ A beautiful, modern note-taking application built with Next.js and FastAPI. Crea
 - **Pydantic** - Data validation and serialization
 - **Uvicorn** - ASGI server for production
 
-## Quick Start
-
 ### Prerequisites
 
 - **Node.js** (v18 or higher)
